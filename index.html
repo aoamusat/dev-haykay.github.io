@@ -20,27 +20,44 @@
     <![endif]-->
     <style>
         /* Sticky footer styles
-        -------------------------------------------------- */
-        html {
-          position: relative;
-          min-height: 100%;
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #424242;
+        color:#fafafa;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
-        body {
-          /* Margin bottom by footer height */
-          margin-bottom: 60px;
-        }
-        .footer {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 60px;
-          line-height: 60px; /* Vertically center the text there */
-          background-color:#424242;
-          color:#fafafa;
-        }
-      .footer a{color:#fafafa;}
-      .footer a.hover{color:#bdbdbd;}
+      }
+      #footer a{color:#fafafa;}
+      #footer a.hover{color:#607d8b;}
     </style>
   </head>
   <body>
@@ -75,23 +92,26 @@
       </div>
     </div>
     <!-- End navigation area -->
-    <div class="container" style="background-color:#616161;width:100%;margin-top:100px;padding:30px;">
-      <h1 class="">
-        Hi, my name is Hakeem
-      </h1>
-      <h3>I'm a full stack web developer, programmer</h3>
+    <div id="wrap">
+      <div class="container" style="background-color:#616161;width:100%;margin-top:100px;padding:30px;">
+        <h1 class="">
+          Hi, my name is Hakeem
+        </h1>
+        <h3>I'm a full stack web developer, programmer</h3>
+      </div>
+      <div id="push"></div>
     </div>
-    <footer class="footer navbar-fixed-bottom">
+    
+    <!--footer-->
+    <footer id="footer">
       <div class="container">
-        <div class="col-md-12" style="padding:5px">
           <p>Follow Me:&nbsp;&nbsp;&nbsp;
             <a href="http://facebook.com/hakymarmzert"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="http://twitter.com/dev_haykay"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="http://instagram.com/dev_haykay"><i class="fa fa-instagram fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="http://plus.google.com"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="http://github.com/dev-haykay"><i class="fa fa-github fa-2x"></i></a>
-          </p>
-        </div>
+        </p>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
