@@ -50,6 +50,18 @@
         margin-left:auto;
         margin-right:auto;
       }
+                  .carousel-content {
+                    color:black;
+                    display:flex;
+                    align-items:center;
+                       }
+
+            #text-carousel {
+              width: 100%;
+              height: auto;
+              padding: 50px;
+            }
+
     </style>
   </head>
   <body style="background-color:#f5f5f5;">
@@ -168,34 +180,53 @@
             <hr class="rule">
           </div>
       </div>
-      <div id="myCarousel" class="row carousel slide">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Carousel items -->
-        <div class="carousel-inner row">
-          <div class="active item col-md-12" style="text-align:center;">
-            <h1>&quot;Haykay is a really good developer that understands 
-              what you need to make your work elegant&quot;</h1>
-            <h4 class="pull-right">Kunle</h4>
-          </div>
-          <div class="item col-md-12">
-            <h1>&quot;When people are saying this guy is a good dev,
-              i couldn't believe until he help me build a cool music website. Thank Bro.&quot;</h1>
-            <h4 class="pull-right">Jamal</h4>
-          </div>
-          <div class="item col-md-12">
-            <h1>&quot;Haykay is a really good developer that understands 
-              what you need to make your work elegant. Lorem ipsum dolot mesit&quot;</h1>
-            <h4 class="pull-right">Kunle</h4>
-          </div>
+      <div id="text-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="carousel-content">
+                        <div>
+                            <p>Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit
+                              blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus
+                              quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis
+                              recusandae corporis culpa quaerat?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-content">
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                              Animi, sint fuga temporibus nam saepe delectus expedita vitae 
+                              magnam necessitatibus dolores tempore consequatur dicta cumque repellendus 
+                              eligendi ducimus placeat! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-content">
+                        <div>                          
+                            <p>Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit
+                              blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus 
+                              quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis 
+                              recusandae corporis culpa quaerat?</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-      </div>
+    </div>
+    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+    <span class="fa fa-chevron-left"></span>
+  </a>
+ <a class="right carousel-control" href="#text-carousel" data-slide="next">
+    <span class="fa fa-chevron-right"></span>
+  </a>
+
+</div>
     </div>
     
     
@@ -220,7 +251,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){ 
- 
+        $('.scrollup').tooltip();
         $(window).scroll(function(){
             if ($(this).scrollTop() > 100) {
                 $('.scrollup').fadeIn();
